@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preetham V - Java Full Stack Developer Resume</title>
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: Calibri, 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.32;
+    color: #000;
+    background: #d0d0d0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    overflow: hidden;
+    margin: 20px auto;
+    background: #fff;
+    padding: 10mm 12mm 8mm 12mm;
+    box-shadow: 0 4px 24px rgba(0,0,0,.15);
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { margin:0; box-shadow:none; padding: 10mm 12mm; }
+    .no-print { display: none !important; }
+  }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 4pt; }
+  .header h1 {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #000;
+    margin-bottom: 2pt;
+  }
+  .contact-line {
+    font-size: 9.5pt;
+    color: #000;
+    margin-bottom: 1pt;
+  }
+  .contact-line a { color: #0563C1; text-decoration: none; }
+
+  /* Section Headings */
+  h2 {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #000;
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 1pt;
+    margin-top: 6pt;
+    margin-bottom: 3pt;
+  }
+
+  /* Summary */
+  .summary {
+    font-size: 9.5pt;
+    color: #000;
+    text-align: justify;
+  }
+
+  /* Skills - plain text, no tables */
+  .skills-section p {
+    font-size: 9.5pt;
+    color: #000;
+    margin-bottom: 1pt;
+  }
+  .skills-section .skill-label {
+    font-weight: 700;
+  }
+
+  /* Entry headers */
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .entry-title {
+    font-weight: 700;
+    font-size: 10pt;
+    color: #000;
+  }
+  .entry-right {
+    font-size: 9pt;
+    color: #000;
+    font-style: italic;
+    white-space: nowrap;
+  }
+  .entry-sub {
+    font-style: italic;
+    font-size: 9.5pt;
+    color: #333;
+    margin-bottom: 1pt;
+  }
+
+  /* Bullet lists */
+  ul {
+    list-style: disc;
+    margin-left: 16pt;
+    margin-top: 1pt;
+    margin-bottom: 2pt;
+  }
+  ul li {
+    font-size: 9.5pt;
+    color: #000;
+    margin-bottom: 0pt;
+  }
+
+  /* Education rows */
+  .edu-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 9.5pt;
+  }
+  .edu-line strong { font-size: 10pt; }
+  .edu-inst {
+    font-size: 9pt;
+    color: #333;
+    margin-bottom: 2pt;
+  }
+
+  /* Print button */
+  .print-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    background: #1a1a1a; color: #fff; border: none;
+    padding: 12px 28px; font-size: 14px; font-weight: 600;
+    border-radius: 8px; cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25);
+    z-index: 100;
+  }
+  .print-btn:hover { background: #0563C1; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Save as PDF</button>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>PREETHAM V</h1>
+    <div class="contact-line">
+      Bengaluru, India | +91-8296693988 |
+      <a href="mailto:preethamvs6@gmail.com">preethamvs6@gmail.com</a>
+    </div>
+    <div class="contact-line">
+      <a href="https://linkedin.com/in/preetham-v">linkedin.com/in/preetham-v</a> |
+      <a href="https://github.com/preethamvs6">github.com/preethamvs6</a> |
+      <a href="https://preethamvs6.vercel.app">preethamvs6.vercel.app</a>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <h2>Professional Summary</h2>
+  <p class="summary">
+    Results-driven Java Full Stack Developer with hands-on experience in designing, developing, and deploying scalable web applications using Core Java, Advanced Java, Spring Boot, Spring MVC, Hibernate, JPA, JDBC, RESTful APIs, and MySQL. Proficient in Object-Oriented Programming (OOP), Collections Framework, Exception Handling, Multithreading, MVC Architecture, Spring Security, and JWT Authentication. Skilled in building responsive frontends using HTML, CSS, and JavaScript. Experienced with Maven, Git, GitHub, Docker, Jenkins, and CI/CD pipelines. Strong team player following Agile, Scrum, and SDLC methodologies.
+  </p>
+
+  <!-- TECHNICAL SKILLS -->
+  <h2>Technical Skills</h2>
+  <div class="skills-section">
+    <p><span class="skill-label">Programming Languages:</span> Java, Core Java, Advanced Java, JavaScript, SQL</p>
+    <p><span class="skill-label">Backend / Frameworks:</span> Spring Boot, Spring MVC, Spring Security, Hibernate, JPA, JDBC, REST APIs, JWT Authentication</p>
+    <p><span class="skill-label">Frontend:</span> HTML, CSS, JavaScript, Responsive Design</p>
+    <p><span class="skill-label">Database:</span> MySQL</p>
+    <p><span class="skill-label">Build Tools:</span> Maven</p>
+    <p><span class="skill-label">Version Control:</span> Git, GitHub, Git Workflow</p>
+    <p><span class="skill-label">DevOps:</span> Docker, Jenkins, CI/CD</p>
+    <p><span class="skill-label">Methodologies:</span> Agile, Scrum, SDLC</p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <h2>Experience</h2>
+  <div class="entry-header">
+    <span class="entry-title">Java Full Stack Developer Intern</span>
+    <span class="entry-right">Feb 2026 - Jun 2026</span>
+  </div>
+  <div class="entry-sub">JSpiders, Bengaluru</div>
+  <ul>
+    <li>Developed scalable Java web applications using Spring Boot, Spring MVC, Hibernate, JPA, JDBC, and MySQL.</li>
+    <li>Designed and implemented RESTful APIs following MVC Architecture with layered separation of concerns.</li>
+    <li>Implemented JWT Authentication and Spring Security for secure user login and session management.</li>
+    <li>Built responsive, cross-browser web pages using HTML, CSS, and JavaScript.</li>
+    <li>Integrated MySQL database using Hibernate ORM, JPA, and JDBC for persistent CRUD operations.</li>
+    <li>Automated CI/CD build and deployment pipelines using Docker and Jenkins.</li>
+    <li>Collaborated in Agile/Scrum teams, followed Git Workflow, and participated in sprint planning and code reviews on GitHub.</li>
+  </ul>
+
+  <!-- PROJECTS -->
+  <h2>Projects</h2>
+
+  <div class="entry-header">
+    <span class="entry-title">HirePulse - Job Portal Web Application</span>
+    <span class="entry-right">Java | Spring Boot | Hibernate | JPA | JDBC | MySQL | REST API</span>
+  </div>
+  <ul>
+    <li>Developed a full-stack Job Portal using Java, Spring Boot, Spring MVC, Hibernate, JPA, and JDBC enabling user registration, job search, resume upload, and online applications.</li>
+    <li>Built RESTful APIs for job posting, candidate management, and application tracking following MVC Architecture.</li>
+    <li>Implemented Spring Security with JWT Authentication for secure login, authorization, and role-based access control (RBAC) for candidates and recruiters.</li>
+    <li>Designed and optimized MySQL database schema supporting CRUD operations for user accounts, job listings, and applications.</li>
+    <li>Created responsive frontend pages using HTML, CSS, and JavaScript for seamless user experience.</li>
+  </ul>
+
+  <div style="height:3pt"></div>
+
+  <div class="entry-header">
+    <span class="entry-title">NexusTech - E-Commerce Web Application</span>
+    <span class="entry-right">Java | Spring Boot | Hibernate | JPA | JDBC | MySQL | REST API</span>
+  </div>
+  <ul>
+    <li>Developed a full-stack E-Commerce platform using Java, Spring Boot, Hibernate, JPA, and JDBC with user authentication, product catalog, shopping cart, checkout, and order management.</li>
+    <li>Built RESTful APIs for product management, customer management, and order processing following MVC Architecture.</li>
+    <li>Implemented secure user authentication and authorization using Spring Security and JWT Authentication.</li>
+    <li>Optimized MySQL queries and database schema for efficient CRUD operations on products, orders, and customer data.</li>
+    <li>Designed responsive frontend using HTML, CSS, and JavaScript ensuring cross-browser compatibility.</li>
+  </ul>
+
+  <!-- EDUCATION -->
+  <h2>Education</h2>
+
+  <div class="edu-line">
+    <span><strong>Bachelor of Engineering (Computer Science and Engineering)</strong></span>
+    <span>2022 - 2026</span>
+  </div>
+  <div class="edu-line">
+    <span class="edu-inst">Don Bosco Institute of Technology, Bengaluru</span>
+    <span>CGPA: 7.3/10</span>
+  </div>
+
+  <div style="height:1pt"></div>
+
+  <div class="edu-line">
+    <span><strong>Pre-University Course (PUC - Science)</strong></span>
+    <span>2020 - 2022</span>
+  </div>
+  <div class="edu-line">
+    <span class="edu-inst">BGS PU College, Bengaluru</span>
+    <span>75%</span>
+  </div>
+
+  <div style="height:1pt"></div>
+
+  <div class="edu-line">
+    <span><strong>SSLC</strong></span>
+    <span>2020</span>
+  </div>
+  <div class="edu-line">
+    <span class="edu-inst">MES Kishora Kendra, Bengaluru</span>
+    <span>85%</span>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <h2>Certifications</h2>
+  <ul>
+    <li>Java Full Stack Development - JSpiders (Feb 2026 - Jul 2026)</li>
+    <li>DevOps Beginner to Advanced (Docker, Jenkins, CI/CD) - Udemy (Dec 2025 - Mar 2026)</li>
+  </ul>
+
+</div>
+
+</body>
+</html>
