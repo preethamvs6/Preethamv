@@ -1,125 +1,106 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[9.5pt,a4paper]{article}
 
-\usepackage[a4paper,margin=0.45in]{geometry}
-\usepackage{titlesec}
+\usepackage[margin=0.45in,top=0.4in,bottom=0.4in]{geometry}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{fontenc}
+
+\definecolor{linkblue}{RGB}{0,102,204}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkblue,
+    linkcolor=linkblue
+}
 
 \pagestyle{empty}
+\setlength{\parindent}{0pt}
 
-\setlist[itemize]{nosep, leftmargin=14pt, topsep=1pt}
+% Section formatting
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5pt}{3pt}
 
-\titleformat{\section}
-{\large\bfseries\uppercase}
-{}{0em}{}[\titlerule]
+% Tight lists
+\setlist[itemize]{leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt}
 
-\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlength{\parskip}{0pt}
+
+\newcommand{\resitem}[2]{\textbf{#1} #2}
 
 \begin{document}
 
+% ---------- HEADER ----------
 \begin{center}
-{\LARGE\textbf{PREETHAM V}}
-
-\vspace{2pt}
-
-Bengaluru, India \quad | \quad +91-8296693988 \quad | \quad
-\href{mailto:preethamvs6@gmail.com}{preethamvs6@gmail.com}
-
-\href{https://linkedin.com/in/preetham-v}{linkedin.com/in/preetham-v}
-\quad | \quad
-\href{https://github.com/preethamvs6}{github.com/preethamvs6}
-\quad | \quad
-\href{https://preethamvs6.vercel.app}{preethamvs6.vercel.app}
+    {\LARGE \textbf{PREETHAM V}}\\[2pt]
+    \small Bengaluru, India \ | \ +91-8296693988 \ | \ \href{mailto:preethamvs6@gmail.com}{preethamvs6@gmail.com}\\
+    \href{https://linkedin.com/in/preetham-v}{linkedin.com/in/preetham-v} \ | \
+    \href{https://github.com/preethamvs6}{github.com/preethamvs6} \ | \
+    \href{https://preethamvs6.vercel.app}{preethamvs6.vercel.app}
 \end{center}
+\vspace{-4pt}
 
-%------------------------------------------------------
+% ---------- PROFESSIONAL SUMMARY ----------
 \section*{Professional Summary}
+Results-driven Java Full Stack Developer (Full Stack Java Developer) with hands-on experience in designing, developing, and deploying scalable web applications using Core Java, Advanced Java, Spring Boot, Spring MVC, Hibernate, JPA, JDBC, RESTful APIs, and MySQL. Proficient in Object-Oriented Programming (OOP), Collections Framework, Exception Handling, Multithreading, MVC Architecture, Spring Security, and JWT Authentication. Skilled in building responsive frontends using HTML, CSS, and JavaScript. Experienced with Maven, Git, GitHub, Docker, Jenkins, and CI/CD pipelines. Strong team player following Agile, Scrum, and SDLC methodologies.
 
-Results-driven Java Full Stack Developer with hands-on experience in designing, developing, and deploying scalable web applications using Core Java, Advanced Java, Spring Boot, Spring MVC, Hibernate, JPA, JDBC, RESTful APIs, and MySQL. Proficient in Object-Oriented Programming (OOP), Collections Framework, Exception Handling, Multithreading, MVC Architecture, Spring Security, and JWT Authentication. Skilled in building responsive frontends using HTML, CSS, and JavaScript. Experienced with Maven, Git, GitHub, Docker, Jenkins, and CI/CD pipelines. Strong team player following Agile, Scrum, and SDLC methodologies.
-
-%------------------------------------------------------
+% ---------- TECHNICAL SKILLS ----------
 \section*{Technical Skills}
+\begin{itemize}[leftmargin=1.2em]
+    \item \resitem{Programming Languages:}{ Java, Core Java, Advanced Java, JavaScript, SQL}
+    \item \resitem{Core Concepts:}{ Object-Oriented Programming (OOP), Collections Framework, Exception Handling, Multithreading, MVC Architecture, Data Structures}
+    \item \resitem{Backend / Frameworks:}{ Spring Boot, Spring MVC, Spring Security, Hibernate, JPA, JDBC, RESTful APIs, JWT Authentication}
+    \item \resitem{Frontend:}{ HTML, CSS, JavaScript, Responsive Web Design}
+    \item \resitem{Database:}{ MySQL, SQL Queries, Database Design}
+    \item \resitem{Build Tools:}{ Maven}
+    \item \resitem{Version Control:}{ Git, GitHub, Git Workflow}
+    \item \resitem{DevOps / CI/CD:}{ Docker, Jenkins, Continuous Integration, Continuous Deployment}
+    \item \resitem{Methodologies:}{ Agile, Scrum, Software Development Life Cycle (SDLC)}
+\end{itemize}
 
-\textbf{Programming Languages:} Java, Core Java, Advanced Java, JavaScript, SQL
-
-\textbf{Backend / Frameworks:} Spring Boot, Spring MVC, Spring Security, Hibernate, JPA, JDBC, REST APIs, JWT Authentication
-
-\textbf{Frontend:} HTML, CSS, JavaScript, Responsive Design
-
-\textbf{Database:} MySQL
-
-\textbf{Build Tools:} Maven
-
-\textbf{Version Control:} Git, GitHub, Git Workflow
-
-\textbf{DevOps:} Docker, Jenkins, CI/CD
-
-\textbf{Methodologies:} Agile, Scrum, SDLC
-
-%------------------------------------------------------
+% ---------- EXPERIENCE ----------
 \section*{Experience}
-
-\textbf{Java Full Stack Developer Intern} \hfill \textit{Feb 2026 -- Jun 2026} \\
-\textit{JSpiders, Bengaluru}
-
+\noindent\textbf{Java Full Stack Developer Intern} -- \textit{JSpiders, Bengaluru} -- Feb 2026 -- Jun 2026
 \begin{itemize}
-\item Developed scalable Java web applications using Spring Boot, Spring MVC, Hibernate, JPA, JDBC, and MySQL.
-\item Designed and implemented RESTful APIs following MVC Architecture with layered separation of concerns.
-\item Implemented JWT Authentication and Spring Security for secure user login and session management.
-\item Built responsive, cross-browser web pages using HTML, CSS, and JavaScript.
-\item Integrated MySQL database using Hibernate ORM, JPA, and JDBC for persistent CRUD operations.
-\item Automated CI/CD build and deployment pipelines using Docker and Jenkins.
-\item Collaborated in Agile/Scrum teams, followed Git Workflow, and participated in sprint planning and code reviews on GitHub.
+    \item Developed scalable Java web applications using Spring Boot, Spring MVC, Hibernate, JPA, JDBC, and MySQL, following MVC Architecture with layered separation of concerns.
+    \item Implemented JWT Authentication and Spring Security for secure login and session management; built responsive cross-browser pages using HTML, CSS, and JavaScript.
+    \item Integrated MySQL using Hibernate ORM, JPA, and JDBC for persistent CRUD operations; automated CI/CD build and deployment pipelines using Docker and Jenkins.
+    \item Collaborated in Agile/Scrum teams, followed Git Workflow, and participated in sprint planning and code reviews on GitHub.
 \end{itemize}
 
-%------------------------------------------------------
+% ---------- PROJECTS ----------
 \section*{Projects}
-
-\textbf{HirePulse -- Job Portal Web Application} \hfill \textit{Java | Spring Boot | Hibernate | JPA | JDBC | MySQL | REST API}
-
+\noindent\textbf{HirePulse -- Job Portal Web Application} -- \textit{Java, Spring Boot, Hibernate, JPA, JDBC, MySQL, REST API}
 \begin{itemize}
-\item Developed a full-stack Job Portal using Java, Spring Boot, Spring MVC, Hibernate, JPA, and JDBC enabling user registration, job search, resume upload, and online applications.
-\item Built RESTful APIs for job posting, candidate management, and application tracking following MVC Architecture.
-\item Implemented Spring Security with JWT Authentication for secure login, authorization, and role-based access control (RBAC) for candidates and recruiters.
-\item Designed and optimized MySQL database schema supporting CRUD operations for user accounts, job listings, and applications.
-\item Created responsive frontend pages using HTML, CSS, and JavaScript for seamless user experience.
+    \item Developed a full-stack Job Portal enabling user registration, job search, resume upload, and online applications, with RESTful APIs for job posting, candidate management, and application tracking following MVC Architecture.
+    \item Implemented Spring Security with JWT Authentication for secure login and role-based access control (RBAC) for candidates and recruiters.
+    \item Designed and optimized MySQL schema for CRUD operations on user accounts, job listings, and applications; built a responsive frontend using HTML, CSS, and JavaScript.
 \end{itemize}
 
-\vspace{3pt}
-
-\textbf{NexusTech -- E-Commerce Web Application} \hfill \textit{Java | Spring Boot | Hibernate | JPA | JDBC | MySQL | REST API}
-
+\vspace{2pt}
+\noindent\textbf{NexusTech -- E-Commerce Web Application} -- \textit{Java, Spring Boot, Hibernate, JPA, JDBC, MySQL, REST API}
 \begin{itemize}
-\item Developed a full-stack E-Commerce platform using Java, Spring Boot, Hibernate, JPA, and JDBC with user authentication, product catalog, shopping cart, checkout, and order management.
-\item Built RESTful APIs for product management, customer management, and order processing following MVC Architecture.
-\item Implemented secure user authentication and authorization using Spring Security and JWT Authentication.
-\item Optimized MySQL queries and database schema for efficient CRUD operations on products, orders, and customer data.
-\item Designed responsive frontend using HTML, CSS, and JavaScript ensuring cross-browser compatibility.
+    \item Developed a full-stack E-Commerce platform with user authentication, product catalog, shopping cart, checkout, and order management, exposing RESTful APIs following MVC Architecture.
+    \item Implemented secure authentication and authorization using Spring Security and JWT; optimized MySQL queries and schema for efficient CRUD operations on products, orders, and customer data.
+    \item Designed a responsive frontend using HTML, CSS, and JavaScript ensuring cross-browser compatibility.
 \end{itemize}
 
-%------------------------------------------------------
+% ---------- EDUCATION ----------
 \section*{Education}
-
-\textbf{Bachelor of Engineering (Computer Science and Engineering)} \hfill 2022 -- 2026 \\
-Don Bosco Institute of Technology, Bengaluru \hfill CGPA: 7.3/10
+\noindent\textbf{Bachelor of Engineering (Computer Science and Engineering)} -- \textit{Don Bosco Institute of Technology, Bengaluru} -- 2022 -- 2026 -- CGPA: 7.3/10
 
 \vspace{2pt}
-
-\textbf{Pre-University Course (PUC -- Science)} \hfill 2020 -- 2022 \\
-BGS PU College, Bengaluru \hfill 75\%
+\noindent\textbf{Pre-University Course (PUC -- Science)} -- \textit{BGS PU College, Bengaluru} -- 2020 -- 2022 -- 75\%
 
 \vspace{2pt}
+\noindent\textbf{SSLC} -- \textit{MES Kishora Kendra, Bengaluru} -- 2020 -- 85\%
 
-\textbf{SSLC} \hfill 2020 \\
-MES Kishora Kendra, Bengaluru \hfill 85\%
-
-%------------------------------------------------------
+% ---------- CERTIFICATIONS ----------
 \section*{Certifications}
-
 \begin{itemize}
-\item Java Full Stack Development -- JSpiders (Feb 2026 -- Jul 2026)
-\item DevOps Beginner to Advanced (Docker, Jenkins, CI/CD) -- Udemy (Dec 2025 -- Mar 2026)
+    \item Java Full Stack Development -- JSpiders (Feb 2026 -- Jul 2026)
+    \item DevOps Beginner to Advanced (Docker, Jenkins, CI/CD) -- Udemy (Dec 2025 -- Mar 2026)
 \end{itemize}
 
 \end{document}
