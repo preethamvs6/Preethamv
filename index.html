@@ -616,7 +616,218 @@ background:var(--coral);
 color:var(--off) !important;
 }
 
+/* about me */
+
+#about{
+background:var(--off);
+}
+.about-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+.about-text{
+font-size:1.05rem;
+line-height:1.7;
+color:var(--dark);
+font-family:'DM Mono',monospace;
+}
+.about-text p{
+margin-bottom:16px;
+}
+.about-lead{
+font-size:1.2rem;
+font-weight:700;
+color:var(--dark);
+}
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+.about-card{
+background:#fff;
+border:2px solid var(--dark);
+padding:20px;
+border-radius:12px;
+box-shadow:4px 4px 0 var(--dark);
+transition:all .3s ease;
+}
+.about-card:hover{
+transform:translate(-2px,-2px);
+box-shadow:6px 6px 0 var(--dark);
+}
+.about-card-icon{
+font-size:1.8rem;
+margin-bottom:8px;
+}
+.about-card h4{
+font-size:1.1rem;
+font-weight:900;
+margin-bottom:6px;
+}
+.about-card p{
+font-family:'DM Mono',monospace;
+font-size:0.85rem;
+color:#444;
+line-height:1.4;
+}
+
+/* education */
+
+#education{
+background:var(--dark);
+color:var(--off);
+}
+.education-timeline{
+display:flex;
+flex-direction:column;
+gap:24px;
+max-width:900px;
+margin:0 auto;
+}
+.edu-card{
+background:rgba(255,255,255,0.04);
+border:2px solid rgba(255,255,255,0.15);
+border-radius:12px;
+padding:28px;
+transition:all .3s ease;
+}
+.edu-card:hover{
+border-color:var(--mint);
+box-shadow:0 0 25px rgba(6,214,160,0.15);
+transform:translateY(-2px);
+}
+.edu-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+margin-bottom:8px;
+}
+.edu-degree{
+font-size:1.25rem;
+font-weight:900;
+color:var(--yellow);
+margin:0;
+}
+.edu-badge{
+font-family:'DM Mono',monospace;
+font-size:0.85rem;
+background:rgba(6,214,160,0.15);
+color:var(--mint);
+border:1px solid var(--mint);
+padding:4px 12px;
+border-radius:20px;
+font-weight:700;
+}
+.edu-institution{
+font-family:'DM Mono',monospace;
+font-size:1.05rem;
+color:var(--coral);
+font-weight:700;
+margin-bottom:12px;
+}
+.edu-details{
+font-size:0.95rem;
+line-height:1.6;
+color:rgba(250,250,245,0.8);
+margin:0;
+}
+
+/* message section & form */
+
+#message{
+background:var(--off);
+text-align:center;
+}
+.message-container{
+max-width:720px;
+margin:0 auto;
+}
+.message-intro{
+font-family:'DM Mono',monospace;
+font-size:1rem;
+color:#555;
+margin-bottom:32px;
+line-height:1.5;
+}
+.message-form{
+background:#fff;
+border:2px solid var(--dark);
+box-shadow:8px 8px 0 var(--dark);
+padding:36px;
+margin:0 auto;
+border-radius:12px;
+text-align:left;
+}
+.form-group{
+margin-bottom:20px;
+}
+.form-group label{
+display:block;
+font-family:'DM Mono',monospace;
+font-size:0.85rem;
+font-weight:700;
+color:var(--dark);
+margin-bottom:8px;
+text-transform:uppercase;
+letter-spacing:0.5px;
+}
+.form-group input,
+.form-group textarea{
+width:100%;
+padding:12px 16px;
+font-family:'DM Mono',monospace;
+font-size:0.95rem;
+border:2px solid var(--dark);
+border-radius:6px;
+background:var(--off);
+color:var(--dark);
+outline:none;
+transition:all .2s ease;
+box-sizing:border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+background:#fff;
+border-color:var(--coral);
+box-shadow:4px 4px 0 var(--dark);
+}
+.btn-submit{
+cursor:pointer;
+font-size:1rem;
+font-weight:700;
+width:100%;
+text-align:center;
+padding:14px;
+}
+.form-status{
+display:none;
+margin-top:20px;
+padding:14px 20px;
+border:2px solid var(--dark);
+border-radius:6px;
+font-family:'DM Mono',monospace;
+font-size:0.9rem;
+font-weight:700;
+text-align:center;
+}
+.form-status.success{
+background:#C8F5E6;
+color:#046347;
+}
+.form-status.error{
+background:#FFD0D0;
+color:#900;
+}
+
 @media (max-width: 768px){
+.about-container{ grid-template-columns:1fr; }
+.about-grid{ grid-template-columns:1fr; }
+.message-form{ padding:24px 18px; }
 nav{
 padding:12px 18px;
 }
@@ -648,8 +859,6 @@ display:none;
 }
 }
 
-
-
 </style>
 </head>
 
@@ -666,11 +875,13 @@ display:none;
 </div>
 
 <ul class="nav-links" id="navLinks">
+<li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
 <li><a href="#certifications">Certifications</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#message">Message</a></li>
 <li><a href="resume.pdf" download class="btn-resume-nav">📄 Resume</a></li>
 </ul>
 </nav>
@@ -705,6 +916,30 @@ Java Full Stack Developer building backend systems that go from code to producti
 
 </section>
 
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about-container">
+<div class="about-text">
+<p class="about-lead">
+I am a passionate <strong>Java Full Stack Developer</strong> based in Bengaluru, India, specializing in building high-performance backend systems, RESTful APIs, and responsive web applications.
+</p>
+<p>
+Graduated with a <strong>Bachelor of Engineering in Computer Science and Engineering</strong> from Don Bosco Institute of Technology, I bring strong hands-on expertise in Core Java, Advanced Java, Spring Boot, Spring MVC, Spring Security, Hibernate ORM, JPA, and MySQL.
+</p>
+<p>
+Through my internship at JSpiders and real-world project developments (such as HirePulse Job Portal and NexusTech E-Commerce), I have built production-ready Spring Boot applications with JWT authentication, Spring Security, and automated deployment pipelines using Docker, Jenkins, and Git Workflows.
+</p>
+</div>
+<div class="about-grid">
+<div class="about-card">
+<div class="about-card-icon">📍</div>
+<h4>Location</h4>
+<p>Bengaluru, Karnataka, India</p>
+</div>
+</div>
+</div>
+</section>
+
 <section id="skills">
 
 <h2 class="section-title">Skills</h2>
@@ -723,20 +958,10 @@ Java Full Stack Developer building backend systems that go from code to producti
 <span class="skill-tag">Hibernate</span>
 <span class="skill-tag">JPA</span>
 <span class="skill-tag">JDBC</span>
+<span class="skill-tag">SQL</span>
+<span class="skill-tag">MySQL</span>
 <span class="skill-tag">RESTful APIs</span>
 <span class="skill-tag">JWT Authentication</span>
-</div>
-</div>
-
-<div class="skill-card">
-<h3>💡 Core Concepts</h3>
-<div class="skill-tags">
-<span class="skill-tag">Object-Oriented Programming (OOP)</span>
-<span class="skill-tag">Collections Framework</span>
-<span class="skill-tag">Exception Handling</span>
-<span class="skill-tag">Multithreading</span>
-<span class="skill-tag">MVC Architecture</span>
-<span class="skill-tag">Data Structures</span>
 </div>
 </div>
 
@@ -751,15 +976,6 @@ Java Full Stack Developer building backend systems that go from code to producti
 <span class="skill-tag">Git</span>
 <span class="skill-tag">GitHub</span>
 <span class="skill-tag">Git Workflow</span>
-</div>
-</div>
-
-<div class="skill-card">
-<h3>🐬 Database & Data</h3>
-<div class="skill-tags">
-<span class="skill-tag">MySQL</span>
-<span class="skill-tag">SQL Queries</span>
-<span class="skill-tag">Database Design</span>
 </div>
 </div>
 
@@ -816,7 +1032,7 @@ Java Full Stack Developer building backend systems that go from code to producti
 <div class="project-thumb">🎫</div>
 <div class="project-body">
 <div class="project-title">HirePulse</div>
-<p>Full-stack job portal backend — Spring Boot REST APIs, JWT auth with role-based access for employers and candidates, and a resume upload/application pipeline backed by MySQL.</p>
+<p>Full-stack job portal web application — Spring Boot REST APIs, JWT authentication, candidate/recruiter management, and a resume upload/application pipeline backed by MySQL.</p>
 <div class="project-tags">
 <span class="skill-tag">☕ Java</span>
 <span class="skill-tag">🍃 Spring Boot</span>
@@ -875,7 +1091,7 @@ Java Full Stack Developer building backend systems that go from code to producti
 <div class="project-thumb">🏥</div>
 <div class="project-body">
 <div class="project-title">Hospital Management System — AWS Deployment</div>
-<p>Backend system for managing patients, appointments, and staff records with role-based access control and relational data modeling. Deployed on AWS EC2 with a Dockerized build.</p>
+<p>Spring Boot backend system for managing patients, appointments, and staff records with secure authentication and relational data modeling. Deployed on AWS EC2 with a Dockerized build.</p>
 <div class="project-tags">
 <span class="skill-tag">☕ Java</span>
 <span class="skill-tag">🍃 Spring Boot</span>
@@ -912,6 +1128,31 @@ Java Full Stack Developer building backend systems that go from code to producti
 
 </section>
 
+<section id="education">
+<h2 class="section-title">Education</h2>
+<div class="education-timeline">
+
+<div class="edu-card">
+<div class="edu-header">
+<div class="edu-badge">2022 — 2026</div>
+<h3 class="edu-degree">Bachelor of Engineering (B.E.) — Computer Science & Engineering</h3>
+</div>
+<div class="edu-institution">Don Bosco Institute of Technology, Bengaluru</div>
+<p class="edu-details"><strong>CGPA: 7.3 / 10</strong>. Strong foundation in Core Java, Data Structures & Algorithms, Database Management Systems, Software Engineering, and Operating Systems.</p>
+</div>
+
+<div class="edu-card">
+<div class="edu-header">
+<div class="edu-badge">2020 — 2022</div>
+<h3 class="edu-degree">Pre-University Course (PUC) — Science (PCMB)</h3>
+</div>
+<div class="edu-institution">BGS PU College, Bengaluru</div>
+<p class="edu-details">Physics, Chemistry, Mathematics, and Biology foundation.</p>
+</div>
+
+</div>
+</section>
+
 <section id="certifications">
 
 <h2 class="section-title">Certifications</h2>
@@ -934,6 +1175,38 @@ Java Full Stack Developer building backend systems that go from code to producti
 
 </div>
 
+</section>
+
+<section id="message">
+<h2 class="section-title">Leave a Message</h2>
+<div class="message-container">
+<p class="message-intro">Let's build together!</p>
+
+<form class="message-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+<div class="form-group">
+<label for="senderName">Your Name</label>
+<input type="text" id="senderName" name="name" required placeholder="John Doe">
+</div>
+
+<div class="form-group">
+<label for="senderEmail">Your Email</label>
+<input type="email" id="senderEmail" name="email" required placeholder="john@example.com">
+</div>
+
+<div class="form-group">
+<label for="senderSubject">Subject</label>
+<input type="text" id="senderSubject" name="subject" required placeholder="Job Opportunity / Project Inquiry">
+</div>
+
+<div class="form-group">
+<label for="senderMessage">Message</label>
+<textarea id="senderMessage" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary btn-submit">Send Message 🚀</button>
+<div class="form-status" id="formStatus"></div>
+</form>
+</div>
 </section>
 
 <section id="contact">
@@ -1102,6 +1375,55 @@ start:"top 88%"
 }
 })
 })
+
+gsap.utils.toArray(".edu-card").forEach((card,i)=>{
+gsap.from(card,{
+y:40,
+opacity:0,
+duration:.6,
+delay:i*.15,
+scrollTrigger:{
+trigger:card,
+start:"top 88%"
+}
+})
+})
+
+/* Contact Form handling */
+function handleFormSubmit(event) {
+  event.preventDefault();
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+  const btn = form.querySelector(".btn-submit");
+  
+  const name = document.getElementById("senderName").value.trim();
+  const email = document.getElementById("senderEmail").value.trim();
+  const subject = document.getElementById("senderSubject").value.trim();
+  const message = document.getElementById("senderMessage").value.trim();
+  
+  if (!name || !email || !subject || !message) {
+    status.style.display = "block";
+    status.className = "form-status error";
+    status.textContent = "Please fill in all fields.";
+    return;
+  }
+  
+  btn.disabled = true;
+  btn.textContent = "Sending...";
+  
+  // Construct mailto fallback
+  const mailtoUrl = `mailto:preethamvs6@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+  
+  setTimeout(() => {
+    window.location.href = mailtoUrl;
+    status.style.display = "block";
+    status.className = "form-status success";
+    status.textContent = "Opening your email client... Thank you for reaching out!";
+    btn.disabled = false;
+    btn.textContent = "Send Message 🚀";
+    form.reset();
+  }, 600);
+}
 
 /* Mobile Hamburger Toggle JS */
 const navToggle = document.getElementById("navToggle");
