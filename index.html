@@ -90,28 +90,14 @@ background:var(--bg-page);
 font-family:'Fraunces',serif;
 color:var(--text-primary);
 overflow-x:hidden;
-cursor:none;
+cursor:auto;
 transition:background .3s ease, color .3s ease;
 }
 
 /* cursor */
 
 .cursor{
-width:16px;
-height:16px;
-background:var(--coral);
-border-radius:50%;
-position:fixed;
-pointer-events:none;
-z-index:999;
-transform:translate(-50%,-50%);
-transition:0.15s;
-}
-
-.cursor.big{
-width:40px;
-height:40px;
-background:var(--yellow);
+display: none !important;
 }
 
 /* nav */
