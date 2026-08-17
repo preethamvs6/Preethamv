@@ -27,6 +27,7 @@ box-sizing:border-box;
 
 html{
 scroll-behavior:smooth;
+scroll-padding-top:90px;
 }
 
 body{
@@ -296,6 +297,7 @@ box-shadow:5px 5px 0 var(--dark);
 
 section{
 padding:100px 40px;
+scroll-margin-top:90px;
 }
 
 .section-title{
@@ -304,6 +306,9 @@ font-weight:900;
 margin-bottom:40px;
 position:relative;
 display:inline-block;
+color:var(--text-primary);
+line-height:1.2;
+z-index:1;
 }
 
 .section-title::after{
@@ -433,6 +438,10 @@ border-bottom-color:var(--coral);
 
 #experience{
 background:var(--dark);
+color:var(--off);
+}
+
+#experience .section-title{
 color:var(--off);
 }
 
@@ -577,6 +586,47 @@ color:#777;
 text-align:center;
 padding:30px;
 font-family:'DM Mono',monospace;
+}
+
+/* scroll to top button */
+#scrollTopBtn {
+position: fixed;
+bottom: 30px;
+right: 30px;
+width: 48px;
+height: 48px;
+border-radius: 12px;
+background: var(--yellow);
+color: #0F0F0F;
+border: 2px solid var(--dark);
+box-shadow: 4px 4px 0 var(--dark);
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+opacity: 0;
+visibility: hidden;
+transform: translateY(20px);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#scrollTopBtn.visible {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+#scrollTopBtn:hover {
+transform: translateY(-4px);
+box-shadow: 6px 6px 0 var(--dark);
+background: var(--coral);
+color: #FFFFFF;
+}
+
+#scrollTopBtn:active {
+transform: translateY(0);
+box-shadow: 2px 2px 0 var(--dark);
 }
 
 /* mobile responsive nav & hamburger */
@@ -943,6 +993,13 @@ Let's build something
 
 </footer>
 
+<!-- Scroll To Top Button -->
+<button id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -964,12 +1021,30 @@ el.addEventListener("mouseenter",()=>cursor.classList.add("big"))
 el.addEventListener("mouseleave",()=>cursor.classList.remove("big"))
 })
 
-/* nav scroll state */
+/* nav scroll state & scroll-to-top button visibility */
 
 const navEl=document.querySelector("nav")
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
 window.addEventListener("scroll",()=>{
-navEl.classList.toggle("scrolled", window.scrollY > 40)
+navEl.classList.toggle("scrolled", window.scrollY > 40);
+if (scrollTopBtn) {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add("visible");
+  } else {
+    scrollTopBtn.classList.remove("visible");
+  }
+}
 })
+
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
 
 /* GSAP hero animations */
 
